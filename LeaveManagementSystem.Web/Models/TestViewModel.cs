@@ -1,4 +1,4 @@
-﻿namespace LeaveManagementSystem.Web.Models;
+﻿namespace LeaveManagementSystem.Web.Models; //2
 
 public class TestViewModel
 {
