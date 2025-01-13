@@ -13,19 +13,31 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult Index() // method
     {
+        // Define business logic
         return View();
     }
 
     public IActionResult Privacy()
     {
+        // Define business logic
         return View();
     }
+    
+    
+    
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        //queries
+        // calculations
+        var model = new ErrorViewModel
+        {
+            RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier 
+            
+        };
+        return View(model);
     }
 }
